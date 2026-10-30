@@ -37,9 +37,12 @@
                 color: #A7F3D0 !important;
                 border-left-color: #10B981 !important;
             }
-            .perm-card {
-                background-color: #1F2937 !important;
+            .perm-card, .permission-card {
+                background: #1F2937 !important;
                 border-color: #374151 !important;
+            }
+            .permission-card .perm-title {
+                color: #F9FAFB !important;
             }
             .footer {
                 border-top-color: #263040 !important;
@@ -228,7 +231,7 @@
     <div class="header">
         <h1>🍃 一叶文件秒搜 · 隐私政策</h1>
         <div class="badge">100% 本地运算 · 零个人数据收集 · 纯净安全</div>
-        <div class="meta">生效日期：2026年10月29日 · 最近更新：2026年10月29日</div>
+        <div class="meta">生效日期：2026年10月29日 · 最近更新：2026年10月30日</div>
     </div>
 
     <div class="highlight-box">
@@ -258,13 +261,41 @@
         <div class="perm-desc"><strong>体验增强权限：</strong>当您检索或浏览 <code>/Android/data/包名</code> 等应用目录时，用于匹配并展示该目录所属应用程序的人性化名称和图标，帮助您直观识别文件归属。</div>
     </div>
 
-    <h2>3. 第三方 SDK 与诊断服务声明</h2>
-    <p>为了保障软件的运行稳定性，在 Google Play 发布的版本中集成了 Google 官方的 <strong>Firebase Crashlytics</strong> 崩溃收集服务：</p>
-    <ul>
-        <li><strong>收集范围：</strong>仅在发生程序崩溃时，收集设备机型、操作系统版本、崩溃堆栈跟踪日志（用于定位修复代码 Bug）。</li>
-        <li><strong>隐私保障：</strong>绝不收集任何个人敏感信息、设备唯一硬件标识符（如 IMEI/MAC）或您的本地文件名与文件内容。</li>
-        <li><strong>国内版本：</strong>国内版完全彻底隔离并移除了任何 Google 远程组件。</li>
-    </ul>
+    <h2>3. 第三方 SDK 与数据服务声明</h2>
+    <p>为了保障软件运行的稳定性、持续优化用户交互体验以及及时下发重要配置，在 Google Play 发布的版本中集成了 Google 官方提供的 <strong>Firebase SDK 套件</strong>（国内渠道版本完全隔离并移除了相关 Google 远程组件）：</p>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Crashlytics（异常崩溃监控）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>使用目的：</strong>实时捕获应用在运行过程中的崩溃异常与未响应（ANR）日志，帮助开发者快速定位代码缺陷并提升软件稳定性。</li>
+                <li><strong>数据收集范围：</strong>设备机型、操作系统版本、应用版本、崩溃堆栈跟踪信息、设备状态（如可用内存与存储空间大小）。</li>
+                <li><strong>隐私边界：</strong>绝不收集任何用户身份信息、网络硬件地址（MAC/IMEI）或设备中的任何文件内容与文件名。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Analytics（匿名用户分析与统计）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>使用目的：</strong>统计应用的日常活跃指标与核心功能使用频次（如搜索发起、筛选模式切换等聚合统计），用于指导产品性能迭代与界面体验改进。</li>
+                <li><strong>数据收集范围：</strong>匿名应用实例标识符（Firebase App Instance ID）、标准设备技术参数（系统语言、屏幕分辨率、操作系统版本）、匿名聚合的功能交互事件。</li>
+                <li><strong>隐私边界：</strong><strong>严格禁止并杜绝</strong>收集用户具体的搜索关键词、搜索历史、本地文件路径、文件内容或任何可识别用户真实身份的个人数据。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Remote Config（远程参数与动态配置）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>使用目的：</strong>用于动态下发应用公告、合规与版本更新提示、性能优化参数与功能开关，无需频繁重新发版即可快速响应兼容性调整。</li>
+                <li><strong>数据交互：</strong>仅在应用启动或配置刷新时，向 Firebase 服务器拉取最新的只读参数键值对。不收集或回传用户本地隐私数据。</li>
+            </ul>
+        </div>
+    </div>
+    <p>上述 Google Firebase 服务均严格遵循 <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google 隐私权政策</a> 及 Google Play 开发者分发协议。</p>
 
     <h2>4. 政策变更与联系我们</h2>
     <p>我们可能会根据相关法规更新本隐私政策。若您对本政策有任何疑问、建议或隐私反馈，可通过开发者邮箱与我们取得联系：<a class="contact-link" href="mailto:KTLShu@163.com">KTLShu@163.com</a>。</p>
@@ -275,7 +306,7 @@
     <div class="header">
         <h1>🍃 Leaf Fast Search · Privacy Policy</h1>
         <div class="badge">100% Local Processing · Zero Personal Data Collection</div>
-        <div class="meta">Effective Date: October 29, 2026</div>
+        <div class="meta">Effective Date: October 29, 2026 · Last Updated: October 30, 2026</div>
     </div>
 
     <div class="highlight-box">
@@ -303,8 +334,41 @@
         <div class="perm-desc"><strong>UI Enhancement:</strong> Used solely to match and display friendly application labels and icons for directories under <code>/Android/data/&lt;package_name&gt;</code>, assisting users in recognizing folder origins.</div>
     </div>
 
-    <h2>3. Third-Party Services (Crash Diagnostics)</h2>
-    <p>For Google Play releases, we utilize Google Firebase Crashlytics strictly for crash diagnostics and app stability improvements. It collects technical diagnostic metadata (device model, OS version, stack traces). No personal user data or file information is ever captured.</p>
+    <h2>3. Third-Party SDKs & Services (Google Firebase)</h2>
+    <p>For Google Play releases, we integrate the official <strong>Google Firebase SDK Suite</strong> strictly to ensure application stability, understand aggregated usage patterns to improve performance, and deliver dynamic runtime configuration. (Domestic/China releases are completely isolated from these Google cloud services):</p>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Crashlytics (Crash Reporting)</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Purpose:</strong> Diagnosing unhandled exceptions, app crashes, and Application Not Responding (ANR) events to ensure high reliability.</li>
+                <li><strong>Data Collected:</strong> Non-personally identifiable diagnostic data including device model, OS version, app version, stack traces, and device memory state at the moment of crash.</li>
+                <li><strong>Privacy Safeguard:</strong> Does not collect personal identity, hardware identifiers (IMEI/MAC), or local file metadata.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Analytics (Aggregated Product Analytics)</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Purpose:</strong> Gauging general app active metrics and aggregate feature interactions to guide UI enhancements and performance optimizations.</li>
+                <li><strong>Data Collected:</strong> Anonymous Firebase instance identifiers, standard technical device attributes (language, screen resolution, OS version), and aggregated in-app interaction events.</li>
+                <li><strong>Privacy Safeguard:</strong> <strong>Strictly prohibited</strong> from capturing users' specific search keywords, queries, search history, file contents, or personal identifiers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Remote Config (Dynamic App Configuration)</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Purpose:</strong> Retrieving up-to-date configuration flags, policy update announcements, and runtime feature toggles without requiring repeated app rebuilds.</li>
+                <li><strong>Data Interaction:</strong> Synchronizes standard read-only configuration keys from Firebase servers upon launch. No personal or storage data is transmitted.</li>
+            </ul>
+        </div>
+    </div>
+    <p>All Google Firebase services operate under the <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
 
     <h2>4. Contact Us</h2>
     <p>If you have any questions or suggestions regarding this Privacy Policy, please contact the developer at: <a class="contact-link" href="mailto:KTLShu@163.com">KTLShu@163.com</a>.</p>

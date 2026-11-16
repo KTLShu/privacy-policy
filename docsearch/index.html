@@ -242,11 +242,6 @@
         <div class="perm-desc"><strong>必要核心权限：</strong>作为专业全盘文档检索工具，应用需要遍历并只读解析您设备存储空间（内部存储与外置存储）中的各类文档正文，或在您主动编辑保存纯文本文件时写入更改。绝不用于任何未经授权的后台读取、篡改或外传行为。</div>
     </div>
 
-    <div class="permission-card">
-        <div class="perm-title">存储访问框架 (SAF) 与可选 Shizuku 增强访问</div>
-        <div class="perm-desc"><strong>按需授权：</strong>在 Android 11 及以上系统中，如您希望检索微信、QQ、钉钉、飞书、WhatsApp、Telegram 等社交与办公应用在 <code>Android/data</code> 或 <code>Android/media</code> 下的受限文档目录，需由您主动通过系统 SAF 选择授权或启用 Shizuku 服务进行本地只读遍历与流式暂存解析。暂存文件在单次检索完成后立即销毁。</div>
-    </div>
-
     <h2>3. 第三方 SDK 与数据服务声明</h2>
     <p>不同分发渠道集成的基础服务有所区分，具体如下：</p>
 
@@ -309,10 +304,6 @@
     <div class="permission-card">
         <div class="perm-title">All Files Access (MANAGE_EXTERNAL_STORAGE)</div>
         <div class="perm-desc"><strong>Core Functional Requirement:</strong> Strictly required for a full-device document search tool to traverse and read document contents locally across internal storage and SD cards, as well as save user-initiated edits to plain-text files. Never used for unauthorized background access or external transmission.</div>
-    </div>
-    <div class="permission-card">
-        <div class="perm-title">Storage Access Framework (SAF) & Optional Shizuku Support</div>
-        <div class="perm-desc"><strong>User-Authorized Access Only:</strong> On Android 11+, if you choose to include scoped folders of messaging or work apps (e.g., WhatsApp, Telegram, Messenger, WeChat, QQ, DingTalk, Lark) under <code>Android/data</code> or <code>Android/media</code>, access is performed strictly upon your explicit SAF or Shizuku authorization using temporary sandboxed streams that are immediately deleted after parsing.</div>
     </div>
 
     <h2>3. Third-Party SDKs & Services (Google Play Release)</h2>

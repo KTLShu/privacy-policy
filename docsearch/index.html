@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 一叶文档搜索 (Leaf Doc Search)</title>
+    <style>
+        :root {
+            --primary: #10B981;
+            --primary-dark: #059669;
+            --text-main: #1E293B;
+            --text-secondary: #475569;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #10B981;
+                --primary-dark: #34D399;
+                --text-main: #F9FAFB;
+                --text-secondary: #9CA3AF;
+                --bg-page: #0B0F19;
+                --bg-card: #161E2E;
+                --border-color: #2E384D;
+            }
+            .header {
+                border-bottom-color: #263040 !important;
+            }
+            .header .badge {
+                background: #064E3B !important;
+                color: #A7F3D0 !important;
+            }
+            .highlight-box {
+                background-color: #064E3B !important;
+                color: #A7F3D0 !important;
+                border-left-color: #10B981 !important;
+            }
+            .permission-card {
+                background: #1F2937 !important;
+                border-color: #374151 !important;
+            }
+            .permission-card .perm-title {
+                color: #F9FAFB !important;
+            }
+            .footer {
+                border-top-color: #263040 !important;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 32px 16px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .header {
+            border-bottom: 2px solid #F1F5F9;
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: #ECFDF5;
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-top: 8px;
+        }
+
+        .meta {
+            margin-top: 12px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #ECFDF5;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #065F46;
+            font-size: 14.5px;
+        }
+
+        .permission-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+        }
+
+        .permission-card .perm-title {
+            font-weight: 600;
+            color: #0F172A;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .permission-card .perm-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .contact-link {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: #94A3B8;
+            text-align: center;
+        }
+
+        .footer-contact {
+            margin-bottom: 8px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .lang-switch a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+            }
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lang-switch">
+        <span>简体中文</span> | <a href="#en">English</a>
+    </div>
+
+    <!-- 简体中文部分 -->
+    <div class="header">
+        <h1>📄 一叶文档搜索 · 隐私政策</h1>
+        <div class="badge">100% 本地离线全文解析 · 文档内容绝不上传 · 纯净安全</div>
+        <div class="meta">生效日期：2026年11月16日 · 最近更新：2026年11月16日</div>
+    </div>
+
+    <div class="highlight-box">
+        <strong>核心隐私承诺：</strong><br>
+        【一叶文档搜索】（Leaf Doc Search）是一款纯本地离线运行的文档全文检索与工作台工具。<strong>本应用绝不会将您的任何文档文件、文档正文内容、搜索关键词、文件名列表、通讯录或个人身份信息上传、存储或共享至任何远程服务器。</strong>所有文件扫描、压缩流解压、PDF/Office 文本提取与文本编辑操作均 100% 在您的设备本地完成。
+    </div>
+
+    <h2>1. 我们如何处理您的数据</h2>
+    <p><strong>本地文档索引与全文解析：</strong>为了实现文件名秒搜及 PDF、Word（.docx/.doc）、Excel（.xlsx/.xls/.csv/.tsv）、PPT（.pptx/.ppt）、纯文本（.txt/.md/.json 等）的正文关键词定位，应用仅在设备本地内存与存储内读取您所选范围的文档并提取匹配片段。所有解析、解密（仅限无打开密码的本地权限锁 PDF）与高亮计算过程均严格在本地执行，绝不通过网络向外传输任何文档内容或关键词。</p>
+    <p><strong>本地缓存与搜索历史：</strong>为提升二次搜索速度，应用会在应用私有沙盒目录中持久化保存轻量的本地文档索引元数据（路径、大小、修改时间），并在内存中维护有上限的近期解析片段缓存；您的最近搜索历史、目录范围、格式偏好及排除目录配置仅保存在本地 <code>SharedPreferences</code> 中。您可以随时清空搜索历史或关闭应用以释放内存缓存，所有本地数据随应用卸载自动彻底删除。</p>
+    <p><strong>内置轻量文本编辑：</strong>当您使用内置纯文本预览/编辑器修改并保存 <code>.txt</code> 等文本文件时，所有编码识别与写回操作均直接在本地文件系统执行，不经过任何中间服务器。</p>
+
+    <h2>2. 设备权限使用说明</h2>
+    <p>本应用严格遵循<strong>最小必要权限原则</strong>申请系统权限，所有权限均仅在本地检索、授权目录访问或文件编辑时使用：</p>
+
+    <div class="permission-card">
+        <div class="perm-title">所有文件访问权限 (MANAGE_EXTERNAL_STORAGE)</div>
+        <div class="perm-desc"><strong>必要核心权限：</strong>作为专业全盘文档检索工具，应用需要遍历并只读解析您设备存储空间（内部存储与外置存储）中的各类文档正文，或在您主动编辑保存纯文本文件时写入更改。绝不用于任何未经授权的后台读取、篡改或外传行为。</div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">存储访问框架 (SAF) 与可选 Shizuku 增强访问</div>
+        <div class="perm-desc"><strong>按需授权：</strong>在 Android 11 及以上系统中，如您希望检索微信、QQ、钉钉、飞书、WhatsApp、Telegram 等社交与办公应用在 <code>Android/data</code> 或 <code>Android/media</code> 下的受限文档目录，需由您主动通过系统 SAF 选择授权或启用 Shizuku 服务进行本地只读遍历与流式暂存解析。暂存文件在单次检索完成后立即销毁。</div>
+    </div>
+
+    <h2>3. 第三方 SDK 与数据服务声明</h2>
+    <p>不同分发渠道集成的基础服务有所区分，具体如下：</p>
+
+    <div class="permission-card">
+        <div class="perm-title">Google AdMob（仅 Google Play 版本）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>使用目的：</strong>在「最近搜索历史」弹窗等非核心检索区域展示轻量级横幅广告，以支持应用的持续免费维护与更新。</li>
+                <li><strong>数据收集范围：</strong>广告标识符（AAID / Advertising ID）、IP 地址估算粗略地理位置、设备基础信息及广告展示/点击交互数据，具体受 <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google 隐私权政策</a> 及当地用户同意框架（UMP）约束。</li>
+                <li><strong>隐私边界：</strong>广告 SDK 绝对无法访问您的本地文件系统、文档内容、文件名或搜索关键词。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase 套件（仅 Google Play 版本）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Firebase Crashlytics（崩溃监控）：</strong>仅用于捕获未捕获异常与 ANR 堆栈信息（含机型、系统版本、内存状态），帮助修复大文档解析稳定性问题，不收集文件内容、路径或搜索词。</li>
+                <li><strong>Firebase Analytics（匿名统计）：</strong>仅统计匿名实例 ID、系统语言与功能使用概览，严格禁止采集任何搜索关键词、文件路径或个人身份数据。</li>
+                <li><strong>Firebase Remote Config（远程配置）：</strong>仅在启动时拉取只读版本提示与合规配置键值，不回传用户本地数据。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">一叶官方轻量统计与配置服务 AppTracker（仅国内渠道版与 Play 基础活跃去重）</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>使用目的：</strong>用于统计基础活跃指标（DAU）与版本号去重；国内版本用于安全下发版本公告与合规配置。</li>
+                <li><strong>数据收集范围：</strong>设备机型、操作系统版本、应用版本号及 Android ID（SSAID，用于匿名设备去重）。</li>
+                <li><strong>隐私边界：</strong>国内版本在您点击同意本隐私政策前保持 100% 静默，绝不收集任何标识；所有版本均绝不收集手机号、IMEI、MAC 地址、通讯录、搜索关键词或任何文档内容。</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>4. 政策变更与联系我们</h2>
+    <p>我们可能会随功能迭代或法规变化更新本隐私政策，并在本页面公布最新生效日期。若您对本政策有任何疑问、建议或隐私咨询，请通过官方开发者邮箱联系我们：<a class="contact-link" href="mailto:KTLShu@163.com">KTLShu@163.com</a>。</p>
+
+    <br><hr id="en" style="border:none; border-top: 1px dashed var(--border-color); margin: 30px 0;"><br>
+
+    <!-- English Section -->
+    <div class="header">
+        <h1>📄 Leaf Doc Search · Privacy Policy</h1>
+        <div class="badge">100% Offline Full-Text Parsing · Zero Document Uploads</div>
+        <div class="meta">Effective Date: November 16, 2026 · Last Updated: November 16, 2026</div>
+    </div>
+
+    <div class="highlight-box">
+        <strong>Our Privacy Commitment:</strong><br>
+        Leaf Doc Search is a standalone, 100% offline full-text document search and workbench utility for Android. <strong>We do NOT collect, upload, store, or share your document files, document text contents, search keywords, filenames, contacts, or personally identifiable information to any external server.</strong> All file scanning, stream decompression, PDF/Office text extraction, and text editing occur strictly locally on your device.
+    </div>
+
+    <h2>1. Data Handling & Local Processing</h2>
+    <p><strong>Local Indexing & Full-Text Extraction:</strong> To provide instant filename filtering and full-text keyword search across PDF, Word (.docx/.doc), Excel (.xlsx/.xls/.csv/.tsv), PowerPoint (.pptx/.ppt), and plain-text files (.txt/.md/.json, etc.), the app reads files strictly locally on your device. All parsing, local permission-lock PDF decryption (only for PDFs without an open password), and snippet highlighting are executed on-device and never transmitted over any network.</p>
+    <p><strong>Local Cache & Search History:</strong> To accelerate repeat searches, lightweight document index metadata (path, size, last modified timestamp) is cached locally in the app's private sandbox, and recent search history, scope settings, and format preferences are stored solely in local <code>SharedPreferences</code>. You can clear search history at any time, and all local caches are permanently deleted upon app uninstallation.</p>
+    <p><strong>Built-in Text Viewer & Editor:</strong> When you inspect or edit plain-text files, encoding detection and file saving are executed directly against your local storage without any server involvement.</p>
+
+    <h2>2. App Permissions & Justification</h2>
+    <div class="permission-card">
+        <div class="perm-title">All Files Access (MANAGE_EXTERNAL_STORAGE)</div>
+        <div class="perm-desc"><strong>Core Functional Requirement:</strong> Strictly required for a full-device document search tool to traverse and read document contents locally across internal storage and SD cards, as well as save user-initiated edits to plain-text files. Never used for unauthorized background access or external transmission.</div>
+    </div>
+    <div class="permission-card">
+        <div class="perm-title">Storage Access Framework (SAF) & Optional Shizuku Support</div>
+        <div class="perm-desc"><strong>User-Authorized Access Only:</strong> On Android 11+, if you choose to include scoped folders of messaging or work apps (e.g., WhatsApp, Telegram, Messenger, WeChat, QQ, DingTalk, Lark) under <code>Android/data</code> or <code>Android/media</code>, access is performed strictly upon your explicit SAF or Shizuku authorization using temporary sandboxed streams that are immediately deleted after parsing.</div>
+    </div>
+
+    <h2>3. Third-Party SDKs & Services (Google Play Release)</h2>
+    <p>For Google Play builds (<code>com.oneleaf.docsearch.play</code>), we integrate the following official Google services (completely excluded from domestic/China builds):</p>
+
+    <div class="permission-card">
+        <div class="perm-title">Google AdMob</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Purpose:</strong> Displays a lightweight banner advertisement inside the recent search history popup to support ongoing development.</li>
+                <li><strong>Data Collected:</strong> Advertising ID (AAID), coarse location inferred from IP, basic device info, and ad interaction metrics in accordance with the <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> and applicable user consent (UMP).</li>
+                <li><strong>Privacy Safeguard:</strong> AdMob has zero access to your local storage, document contents, filenames, or search keywords.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">Google Firebase Suite (Crashlytics, Analytics, Remote Config)</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Firebase Crashlytics:</strong> Captures anonymized crash stack traces, device model, OS version, and memory state to improve large-document parsing stability. Never collects file contents, paths, or search keywords.</li>
+                <li><strong>Firebase Analytics:</strong> Collects anonymous Firebase App Instance IDs and aggregate app usage metrics. Strictly prohibited from capturing search queries, filenames, or personal identifiers.</li>
+                <li><strong>Firebase Remote Config:</strong> Fetches read-only runtime configuration flags and update notices upon launch.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="permission-card">
+        <div class="perm-title">AppTracker (Lightweight Active Metrics)</div>
+        <div class="perm-desc">
+            <ul>
+                <li><strong>Purpose:</strong> Counts basic daily active launches (DAU) and app version deduplication (and remote notices on domestic builds).</li>
+                <li><strong>Data Collected:</strong> Device model, OS version, app version, and Android ID (SSAID). Never collects phone numbers, IMEI, MAC addresses, contacts, search keywords, or document contents.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>4. Policy Updates & Contact Us</h2>
+    <p>We may update this Privacy Policy as features evolve or legal requirements change. If you have any questions or privacy inquiries, please contact the developer at: <a class="contact-link" href="mailto:KTLShu@163.com">KTLShu@163.com</a>.</p>
+
+    <div class="footer">
+        <div class="footer-contact">开发者邮箱 / Contact：<a class="contact-link" href="mailto:KTLShu@163.com">KTLShu@163.com</a></div>
+        <div>© 2026 OneLeaf Studio. All Rights Reserved. · 一叶工作室 版权所有</div>
+    </div>
+</div>
+
+</body>
+</html>
